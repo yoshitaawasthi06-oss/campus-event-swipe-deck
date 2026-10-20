@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Campus Event Swipe Deck</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h1>Campus Events</h1>
+    <p class="hint">Swipe right = I'm in &nbsp;|&nbsp; Swipe left = skip</p>
+
+    <!-- Category filter buttons get created here by app.js -->
+    <div id="filters"></div>
+
+    <!-- The swipeable cards appear here -->
+    <div id="deck"></div>
+
+    <div class="buttons">
+      <button id="skipBtn" class="round skip" title="Skip">✕</button>
+      <button id="undoBtn" class="round undo" title="Undo last swipe">↶</button>
+      <button id="inBtn" class="round in" title="I'm in">✓</button>
+    </div>
+
+    <h2>My RSVPs</h2>
+    <ul id="rsvpList"></ul>
+
+    <button id="resetBtn" class="link">Reset everything</button>
+  </main>
+
+  <!-- Order matters: events first, then the app logic -->
+  <script src="events.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
